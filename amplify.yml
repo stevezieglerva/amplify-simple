@@ -5,7 +5,7 @@ frontend:
     build:
       commands:
         - echo "Starting"
-        - python --version
+        - python3 --version
   artifacts:
     # IMPORTANT - Please verify your build output directory
     baseDirectory: /
