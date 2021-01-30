@@ -38,8 +38,12 @@ end = """
 """
 
 html = front
-for i in range(100):
+for i in range(2000):
     name = "x".ljust(i, "x")
+    if i % 100 == 0:
+        name = "John " + name
+    if i % 33 == 0:
+        name = "Jane " + name
     row = f"""               
                     <tr>
                         <td class="name">{i} {name}</td>
@@ -49,5 +53,7 @@ for i in range(100):
     html = html + row
 
 html = html + end
+length = len(html)
+print(f"html length: {length}")
 with open("index.html", "w") as file:
     file.write(html)
